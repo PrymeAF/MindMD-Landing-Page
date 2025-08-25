@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMD® - Unlock Your Brain's True Potential | 1MD Nutrition</title>
+    <meta name="description" content="Experience crystal-clear focus & effortless memory with MindMD®. Neurologist-formulated nootropic for peak mental performance. 90-day guarantee.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .header-cta {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .header-cta:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600"><defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0)"/></radialGradient></defs><circle cx="200" cy="150" r="100" fill="url(%23grad1)"/><circle cx="800" cy="400" r="150" fill="url(%23grad1)"/><circle cx="500" cy="300" r="80" fill="url(%23grad1)"/></svg>') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .hero .subheadline {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5);
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: 2px solid rgba(255,255,255,0.5);
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            text-align: center;
+        }
+
+        .problem-section h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #2d3748;
+        }
+
+        .problem-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 20px;
+            color: #4a5568;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .solution-section h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #2d3748;
+        }
+
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .solution-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+
+        .solution-visual {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+            text-align: center;
+        }
+
+        .solution-visual h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Ingredients Section */
+        .ingredients-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .ingredient-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ingredient-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .ingredient-card h4 {
+            font-size: 1.4rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .ingredient-card p {
+            color: #4a5568;
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin: 40px 0;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 700;
+        }
+
+        .comparison-table .highlight {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            font-weight: 600;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: #667eea;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #4a5568;
+            margin-top: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .guarantee-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 400px;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subheadline {
+                font-size: 1.1rem;
+            }
+
+            .solution-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .ingredients-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                overflow-x: auto;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .cta-primary,
+            .cta-secondary {
+                padding: 15px 30px;
+                font-size: 1rem;
+                display: block;
+                margin: 10px auto;
+                max-width: 280px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Interactive elements */
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            top: 40%;
+            left: 80%;
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">MindMD®</div>
+                <a href="#cta" class="header-cta">Try Risk-Free</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Unlock Your Brain's True Potential</h1>
+                <p class="subheadline fade-in">Experience crystal-clear focus & effortless memory with our neurologist-formulated nootropic designed for peak mental performance.</p>
+                <div class="fade-in">
+                    <a href="#solution" class="cta-primary">Yes, Upgrade My Brain!</a>
+                    <a href="#science" class="cta-secondary">See The Science</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2>The Moment You Realize Your Brain Isn't Keeping Up…</h2>
+            <p>It's that sinking feeling. You're in the middle of a presentation and the perfect word vanishes. You're telling a story and a key detail evaporates. You walk into a room, and for the life of you, can't remember why.</p>
+            <p>For high-achievers, this mental friction is a silent career killer. For parents, it's the mental load that feels heavier every day. The world demands more from us than ever, but our brains weren't built for this constant digital barrage.</p>
+            <p><strong>You're not imagining it, and you're definitely not alone.</strong></p>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section" id="solution">
+        <div class="container">
+            <h2>Your Brain is Starving. Feed it What it Needs.</h2>
+            <div class="solution-content">
+                <div class="solution-text">
+                    <p>Just like a high-performance engine needs premium fuel, your brain requires specific, powerful nutrients to operate at its peak. Coffee and energy drinks are just temporary patches that lead to crashes. Brain games can feel like a chore.</p>
+                    <p><strong>You need a real, sustainable solution built on science.</strong></p>
+                    <p>MindMD® by 1MD Nutrition isn't another magic pill. It's a precision-formulated nootropic created by leading integrative neurologist, Dr. Alexander Zubkov. We've sourced the most potent, clinically-proven ingredients to give your brain comprehensive support.</p>
+                </div>
+                <div class="solution-visual">
+                    <h3>MindMD® Targets:</h3>
+                    <p>🧠 Memory & Recall</p>
+                    <p>🎯 Focus & Concentration</p>
+                    <p>💡 Mental Clarity</p>
+                    <p>⚡ Cognitive Energy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ingredients-section" id="science">
+        <div class="container">
+            <h2 style="text-align: center; color: #2d3748; margin-bottom: 20px;">The Science of a Sharper Mind</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #4a5568; max-width: 800px; margin: 0 auto 40px;">We don't hide behind proprietary blends or marketing fluff. We show you the science.</p>
+            
+            <div class="ingredients-grid">
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">🧠</div>
+                    <h4>Bacognize® Bacopa Monnieri</h4>
+                    <p>Clinically shown to improve memory recall by up to <strong>78%</strong> and enhance focus and learning. This adaptogenic powerhouse supports cognitive function and emotional balance.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">🍇</div>
+                    <h4>COGNIGRAPE™ Grape Extract</h4>
+                    <p>A powerhouse of antioxidants that protects brain cells from oxidative stress and has been shown to improve both immediate and delayed memory function.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">🔗</div>
+                    <h4>Phosphatidylserine</h4>
+                    <p>The brain's building block. This essential phospholipid is crucial for healthy nerve cell membranes and communication, directly impacting memory and learning.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">⚡</div>
+                    <h4>Neuro-Synergy Blend</h4>
+                    <p>Vitamin B6, Folate, and Green Tea Extract work together to support healthy neurotransmitter function, reduce mental fatigue, and promote calm, focused alertness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 style="text-align: center; color: #2d3748; margin-bottom: 20px;">The MindMD® Difference</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #4a5568; margin-bottom: 40px;">Results You Can Measure</p>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature/Benefit</th>
+                            <th class="highlight">MindMD®</th>
+                            <th>Other Nootropics</th>
+                            <th>Coffee/Energy Drinks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Neurologist-Formulated</strong></td>
+                            <td class="highlight">✅</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Clinically-Proven Dosages</strong></td>
+                            <td class="highlight">✅</td>
+                            <td>Often underdosed</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Long-Term Brain Health</strong></td>
+                            <td class="highlight">✅</td>
+                            <td>Maybe</td>
+                            <td>No, causes crashes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jitter-Free Energy</strong></td>
+                            <td class="highlight">✅</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td><strong>90-Day Guarantee</strong></td>
+                            <td class="highlight">✅</td>
+                            <td>Rarely</td>
+                            <td>❌</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 style="text-align: center; color: #2d3748; margin-bottom: 40px;">Real Results from Real People</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">I was skeptical, but after a month on MindMD, the difference is night and day. The brain fog is gone. I'm more productive at work and more present with my family. It feels like my brain just got a major upgrade.</div>
+                    <div class="testimonial-author">- Sarah K., Marketing Director</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">As an entrepreneur, my mental performance is everything. MindMD helps me stay sharp, focused, and creative, even on the most demanding days. It's a non-negotiable part of my daily routine.</div>
+                    <div class="testimonial-author">- Michael P., Founder & CEO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2>Your Brain's Best Days Are Ahead of It</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">Stop settling for a mind that feels like it's running at half-speed. You have the power to reclaim your cognitive edge, and it starts with giving your brain the elite nutrition it deserves.</p>
+            
+            <div class="guarantee-badge">
+                <h3 style="margin-bottom: 10px;">90-Day Money-Back Guarantee</h3>
+                <p>If you don't feel a noticeable improvement in your focus, memory, and mental clarity, simply send it back for a full refund. No questions asked.</p>
+            </div>
+            
+            <a href="https://1md.org/products/mindmd" class="cta-primary" target="_blank">Yes, I Want to Upgrade My Brain!</a>
+            
+            <p style="margin-top: 30px; opacity: 0.9;">Over 1 million people trust 1MD Nutrition for their health. It's your turn to feel the difference.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary. Consult your healthcare provider before starting any new supplement regimen.</p>
+                <p style="margin-top: 20px;">© 2025 1MD Nutrition. All rights reserved. This is an independent advertorial page created for educational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections and cards
+        document.querySelectorAll('section, .ingredient-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Enhanced hover effects for CTA buttons
+        document.querySelectorAll('.cta-primary, .cta-secondary').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Track button clicks (for analytics)
+        document.querySelectorAll('.cta-primary, .cta-secondary').forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('CTA button clicked:', this.textContent);
+                // Analytics tracking would go here
+            });
+        });
+
+        // Add parallax effect to floating elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelectorAll('.floating-element');
+            const speed = 0.5;
+
+            parallax.forEach(element => {
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+
+        // Add dynamic gradient animation
+        let gradientAngle = 135;
+        setInterval(() => {
+            gradientAngle += 1;
+            if (gradientAngle > 225) gradientAngle = 135;
+            
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                heroSection.style.background = `linear-gradient(${gradientAngle}deg, #667eea 0%, #764ba2 100%)`;
+            }
+        }, 100);
+    </script>
+</body>
+</html>
+
